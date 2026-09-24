@@ -2,53 +2,80 @@
 
 **Visual Analytics for Video Game Market Positioning**
 
-Game DNA is an interactive Visual Analytics system for exploring the
-multidimensional market positioning of PC video games available on Steam.
+**Presented by:**
+- **Simone Amoriello**
 
-The system combines dimensionality reduction, coordinated visualizations and
-interaction-driven analytics to support the exploration of market segments,
-the characterization of groups of games and the discovery of comparable
-titles.
+  Sapienza University of Rome
 
----
-
-## Intended User
-
-The intended user is a **game market analyst working for a small or medium-sized
-PC game developer or publisher**.
-
-Game DNA supports tasks such as:
-
-- exploring the Steam market;
-- identifying groups of games with similar market profiles;
-- understanding which characteristics distinguish specific market regions;
-- finding comparable products;
-- investigating relationships between market positioning and Steam tags;
-- discovering comparable games even across different genre categories.
-
-The system is designed for exploratory analysis and is not intended to predict
-the commercial success of a game.
+  GitHub: https://github.com/SimoneAmoriello
 
 ---
 
-## Dataset
+## Index
 
-The project uses the **FronkonGames Steam Games Dataset**:
+- [Prerequisites](#prerequisites)
+- [Installation and Launch](#installation-and-launch)
+- [Project Files](#project-files)
 
-https://huggingface.co/datasets/FronkonGames/steam-games-dataset
+---
 
-The original dataset contains **125,855 Steam entries**.
+## Prerequisites
 
-A preprocessing pipeline removes unsuitable or insufficient records and
-produces a candidate pool of **18,170 games**.
+Before launching the application, make sure the following software is installed:
 
-A proportional stratified random sample based on popularity tier and release
-era is then used to obtain the final dataset of:
+- **Git**  
+  https://git-scm.com/downloads
 
-**5,000 games**
+- **Node.js and npm**  
+  https://nodejs.org/
 
-The analytical representation contains six dimensions, giving an
-Angelini-Santucci index of:
+Python is only required if you want to reproduce the preprocessing and analytical pipeline contained in the `scripts` folder.
 
-```text
-AS = 5000 × 6 = 30,000
+---
+
+## Installation and Launch
+
+To install and launch the application:
+
+1. Open a terminal or command prompt.
+
+2. Navigate to the folder in which you want to clone the repository.
+
+3. Clone the repository:
+
+   ```bash
+   git clone https://github.com/SimoneAmoriello/GameDNA-VisualAnalytics.git
+   ```
+
+4. Navigate to the frontend folder:
+
+   ```bash
+   cd GameDNA-VisualAnalytics/frontend
+   ```
+
+5. If you are launching the application for the first time, install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+6. Start the application:
+
+   ```bash
+   npm run dev
+   ```
+
+7. Open the local address displayed by Vite in your browser, usually:
+
+   ```text
+   http://localhost:5173/
+   ```
+
+---
+
+## Project Files
+
+- `frontend/` — interactive Visual Analytics application
+- `scripts/` — preprocessing and analytical pipeline
+- `report/Game_DNA_Report.pdf` — final project report
+- `presentation/Game_DNA_Presentation.pptx` — project presentation
